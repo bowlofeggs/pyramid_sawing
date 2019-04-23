@@ -54,7 +54,7 @@ def includeme(config):
                        .format(PREFIX, PROJECT))
 
     with open(file, 'r') as f:
-        logging_config = yaml.load(f)
+        logging_config = yaml.safe_load(f)
 
     dictConfig(logging_config)
 
